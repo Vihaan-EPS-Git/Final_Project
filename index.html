@@ -4,23 +4,351 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tailwind in VS Code</title>
+    <title>Skill At Spice - Food You Can Trust</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<!-- Header Area -->
+<body class="bg-gray-50 text-gray-800">
 
-<body>
-    <div class="bg-gray-100 text-indigo-800 p-6">
-        <div class="flex items-center gap-4">
-            <a href="" target="_blank" class="inline-block focus:outline-none">
-                <img src="images/Logo.png" class="w-20 h-20 transition duration-300 hover:scale-125 cursor-pointer">
+    <!-- Header Area -->
+    <div class="bg-gray-100 text-indigo-800 p-6 shadow-sm">
+        <div class="flex items-center gap-4 max-w-6xl mx-auto">
+            <a href="#" class="inline-block focus:outline-none">
+                <img src="images/Logo.png" alt="Skill At Spice Logo"
+                    class="w-20 h-20 transition duration-300 hover:scale-125 cursor-pointer">
             </a>
-            <h1 class="text-4xl font-extrabold">
-                Skill At Spice - Food You Can Trust
-            </h1>
+            <div>
+                <h1 class="text-3xl md:text-4xl font-extrabold">
+                    Skill At Spice - Food You Can Trust
+                </h1>
+                <p class="text-sm text-gray-600 mt-1">14111 NE 24th St, Bellevue WA 98007</p>
+            </div>
         </div>
     </div>
+
+    <!-- Main Content Area -->
+    <main class="max-w-6xl mx-auto p-6">
+
+        <!-- Notice Banner -->
+        <div class="bg-amber-100 border-l-4 border-amber-500 text-amber-900 p-4 rounded mb-8 shadow-sm">
+            <p class="font-semibold">New menu is posted for Thursday. Orders for Monday & Thursday pickups available
+                weekly!</p>
+        </div>
+
+        <!-- How It Works Section -->
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">How It Works</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+
+            <!-- Box 1: Pickup Schedule -->
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                <div class="flex items-center gap-2 font-bold text-lg text-indigo-600 mb-3">
+                    <img src="images/Calendar.png" alt="Calendar Icon" class="w-6 h-6 object-contain">
+                    Pickup Schedule
+                </div>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li><strong class="text-gray-800">Monday Orders:</strong> Accepted Friday to Sunday night. Pickup on
+                        Monday between 5 PM - 6 PM.</li>
+                    <li><strong class="text-gray-800">Thursday Orders:</strong> Accepted Friday to Monday night. Pickup
+                        on Thursday 3 PM - 6 PM.</li>
+                </ul>
+            </div>
+
+            <!-- Box 2: Location & Rules -->
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                <div class="flex items-center gap-2 font-bold text-lg text-indigo-600 mb-3">
+                    <img src="images/Pin.png" alt="Pin Icon" class="w-6 h-6 object-contain">
+                    Location & Access
+                </div>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li><strong class="text-gray-800">Pickup Address:</strong> 14111 NE 24th St, Bellevue 98007</li>
+                    <li><strong class="text-gray-800">No Dine-In:</strong> Sorry, no dine-in or walk-ins available!</li>
+                </ul>
+            </div>
+
+            <!-- Box 3: Payment & Minimums -->
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                <div class="flex items-center gap-2 font-bold text-lg text-indigo-600 mb-3">
+                    <img src="images/Credit_Card.png" alt="Credit Card Icon" class="w-6 h-6 object-contain">
+                    Payment & Orders
+                </div>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li><strong class="text-gray-800">Minimum Order:</strong> $25</li>
+                    <li><strong class="text-gray-800">Accepted Payments:</strong> Credit cards, PayPal, Venmo, and
+                        Zelle.</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Featured Food Gallery Section -->
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Our Dishes & Specialties</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+            <!-- 1. Baingan Bharta -->
+            <div
+                class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition">
+                <img src="images/Baingan_Bharta.avif" alt="Baingan Bharta" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-indigo-800 mb-1">Baingan Bharta</h3>
+                    <p class="text-sm text-gray-600">Smoky roasted eggplant mashed and cooked with aromatic spices,
+                        onions, and tomatoes.</p>
+                </div>
+            </div>
+
+            <!-- 2. Beetroot Raita -->
+            <div
+                class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition">
+                <img src="images/Beetroot_Raita.avif" alt="Beetroot Raita" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-indigo-800 mb-1">Beetroot Raita</h3>
+                    <p class="text-sm text-gray-600">Refreshing, creamy whipped yogurt blended with grated beetroot and
+                        seasonings.</p>
+                </div>
+            </div>
+
+            <!-- 3. Beets Rasam -->
+            <div
+                class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition">
+                <img src="images/BeetsRasam_edited.avif" alt="Beets Rasam" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-indigo-800 mb-1">Beetroot Rasam</h3>
+                    <p class="text-sm text-gray-600">A warm, flavorful, and spiced soup infused with traditional herbs.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 4. Bobbatlu -->
+            <div
+                class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition">
+                <img src="images/Bobbatlu.avif" alt="Bobbatlu" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-indigo-800 mb-1">Bobbatlu / Puran Poli</h3>
+                    <p class="text-sm text-gray-600">Traditional sweet flatbread stuffed with a delicious lentil and
+                        jaggery filling.</p>
+                </div>
+            </div>
+
+            <!-- 5. Boiled Eggs Fry -->
+            <div
+                class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition">
+                <img src="images/BoiledEggsFry_edited.avif" alt="Boiled Eggs Fry" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-indigo-800 mb-1">Boiled Eggs Fry</h3>
+                    <p class="text-sm text-gray-600">Pan-roasted boiled eggs coated in a spicy, flavorful masala blend.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 6. Boondi Laddoo -->
+            <div
+                class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition">
+                <img src="images/Boondi_Laddoo.avif" alt="Boondi Laddoo" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-indigo-800 mb-1">Boondi Laddoo</h3>
+                    <p class="text-sm text-gray-600">Rich, festive sweet spheres made from fine boondi and fragrant
+                        ghee.</p>
+                </div>
+            </div>
+
+            <!-- 7. Chilli Paneer -->
+            <div
+                class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition">
+                <img src="images/ChilliPaneer.avif" alt="Chilli Paneer" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-indigo-800 mb-1">Chilli Paneer</h3>
+                    <p class="text-sm text-gray-600">Tossed in a savory, spicy, and tangy sauce with fresh bell peppers
+                        and onions.</p>
+                </div>
+            </div>
+
+            <!-- 8. Chutney -->
+            <div
+                class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition">
+                <img src="images/Chutney.avif" alt="Chutney" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-indigo-800 mb-1">Signature Chutney</h3>
+                    <p class="text-sm text-gray-600">Freshly prepared flavorful condiment to perfectly complement your
+                        meal.</p>
+                </div>
+            </div>
+
+            <!-- 9. Dahi Vada -->
+            <div
+                class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition">
+                <img src="images/Dahi Vada.avif" alt="Dahi Vada" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-indigo-800 mb-1">Dahi Vada</h3>
+                    <p class="text-sm text-gray-600">Soft lentil dumplings soaked in creamy yogurt and topped with tangy
+                        chutneys.</p>
+                </div>
+            </div>
+
+            <!-- 10. Date Nut Rolls -->
+            <div
+                class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition">
+                <img src="images/DateNutRolls.avif" alt="Date Nut Rolls" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-indigo-800 mb-1">Date Nut Rolls</h3>
+                    <p class="text-sm text-gray-600">Delicious and wholesome rolls made with sweet dates and crunchy
+                        nuts.</p>
+                </div>
+            </div>
+
+            <!-- 11. Gobi Manchurian -->
+            <div
+                class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition">
+                <img src="images/Gobi_Manchurian.avif" alt="Gobi Manchurian" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-indigo-800 mb-1">Gobi Manchurian</h3>
+                    <p class="text-sm text-gray-600">Crispy cauliflower florets tossed in a flavorful Indo-Chinese
+                        sauce.</p>
+                </div>
+            </div>
+
+            <!-- 12. Hakka Noodles -->
+            <div
+                class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition">
+                <img src="images/Hakka Noodles.avif" alt="Hakka Noodles" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-indigo-800 mb-1">Hakka Noodles</h3>
+                    <p class="text-sm text-gray-600">Wok-tossed noodles packed with vibrant vegetables and aromatic
+                        seasonings.</p>
+                </div>
+            </div>
+
+            <!-- 13. Hyderabadi Haleem -->
+            <div
+                class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition">
+                <img src="images/Hyderabadi_Haleem.avif" alt="Hyderabadi Haleem" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-indigo-800 mb-1">Hyderabadi Haleem</h3>
+                    <p class="text-sm text-gray-600">Slow-cooked rich stew made with meat, lentils, and cracked wheat.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 14. Makaroni Balado -->
+            <div
+                class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition">
+                <img src="images/Makaroni_Balado.avif" alt="Makaroni Balado" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-indigo-800 mb-1">Makaroni Balado</h3>
+                    <p class="text-sm text-gray-600">Savory macaroni tossed in a bold and spicy chili seasoning.</p>
+                </div>
+            </div>
+
+            <!-- 15. Masala Vada -->
+            <div
+                class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition">
+                <img src="images/Masala_Vada.avif" alt="Masala Vada" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-indigo-800 mb-1">Masala Vada</h3>
+                    <p class="text-sm text-gray-600">Crunchy, spiced split-chana dal fritters fried to golden
+                        perfection.</p>
+                </div>
+            </div>
+
+            <!-- 16. Moong Dal Ladoo -->
+            <div
+                class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition">
+                <img src="images/Moong_Dal_Ladoo.avif" alt="Moong Dal Ladoo" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-indigo-800 mb-1">Moong Dal Ladoo</h3>
+                    <p class="text-sm text-gray-600">Traditional melt-in-your-mouth sweet treats prepared with roasted
+                        moong dal and ghee.</p>
+                </div>
+            </div>
+
+            <!-- 17. Mysore Pak -->
+            <div
+                class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition">
+                <img src="images/mysorepak.avif" alt="Mysore Pak" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-indigo-800 mb-1">Mysore Pak</h3>
+                    <p class="text-sm text-gray-600">A rich, traditional sweet made with generous amounts of ghee and
+                        gram flour.</p>
+                </div>
+            </div>
+
+            <!-- 18. Paneer Kathi Rolls -->
+            <div
+                class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition">
+                <img src="images/Paneer_Kathi_Rolls.avif" alt="Paneer Kathi Rolls" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-indigo-800 mb-1">Paneer Kathi Rolls</h3>
+                    <p class="text-sm text-gray-600">Warm flatbread rolled around spiced paneer and aromatic herbs.</p>
+                </div>
+            </div>
+
+            <!-- 19. Pav Bhaji -->
+            <div
+                class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition">
+                <img src="images/PavBhaji_edited.avif" alt="Pav Bhaji" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-indigo-800 mb-1">Pav Bhaji</h3>
+                    <p class="text-sm text-gray-600">Thick spiced vegetable mash served alongside warm buttered pav.</p>
+                </div>
+            </div>
+
+            <!-- 20. Rava Kesari -->
+            <div
+                class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition">
+                <img src="images/Rava_Kesari.avif" alt="Rava Kesari" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-indigo-800 mb-1">Rava Kesari</h3>
+                    <p class="text-sm text-gray-600">A delicious semolina pudding cooked with ghee, sugar, and nuts.</p>
+                </div>
+            </div>
+
+            <!-- 21. Salad -->
+            <div
+                class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition">
+                <img src="images/Salad.avif" alt="Salad" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-indigo-800 mb-1">Fresh House Salad</h3>
+                    <p class="text-sm text-gray-600">Crisp, fresh vegetables tossed together for a healthy side.</p>
+                </div>
+            </div>
+
+            <!-- 22. Spinach Pakoda -->
+            <div
+                class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition">
+                <img src="images/SpinachPakoda_edited_edited.avif" alt="Spinach Pakoda"
+                    class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-indigo-800 mb-1">Spinach Pakoda</h3>
+                    <p class="text-sm text-gray-600">Crispy, golden-fried fritters made with fresh spinach leaves and
+                        spiced batter.</p>
+                </div>
+            </div>
+
+            <!-- 23. Veg Puffs -->
+            <div
+                class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition">
+                <img src="images/Veg_Puffs.avif" alt="Veg Puffs" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-indigo-800 mb-1">Veg Puffs</h3>
+                    <p class="text-sm text-gray-600">Flaky, golden pastry crust filled with a savory vegetable filling.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 24. Salad Edited -->
+            <div
+                class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition">
+                <img src="images/Salad_Edited.avif" alt="Salad Edited" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-indigo-800 mb-1">Salad Edited</h3>
+                    <p class="text-sm text-gray-600"> A fresh and vibrant salad made with a mix of seasonal vegetables
+                        and a light dressing.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
 </body>
 
 </html>
