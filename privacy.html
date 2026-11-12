@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy | Skill At Spice</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation Area -->
+    <header class="bg-gray-100 text-indigo-800 shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+
+            <!-- Logo & Title Section -->
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                    <a href="index.html" class="inline-block focus:outline-none">
+                        <img src="images/Logo.png" alt="Skill At Spice Logo"
+                            class="w-16 h-16 transition duration-300 hover:scale-125 cursor-pointer">
+                    </a>
+                    <div>
+                        <h1 class="text-2xl md:text-3xl font-extrabold">
+                            Skill At Spice
+                        </h1>
+                        <p class="text-xs text-gray-600">14111 NE 24th St, Bellevue WA 98007</p>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="md:hidden text-indigo-800 focus:outline-none p-2 cursor-pointer">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Updated Navigation Links Syntax -->
+            <nav id="menu"
+                class="hidden md:flex flex-col md:flex-row gap-3 md:gap-6 font-semibold text-sm pt-2 md:pt-0">
+                <a href="index.html" class="hover:text-indigo-600 transition">Home</a>
+                <a href="catering.html" class="hover:text-indigo-600 transition">Catering</a>
+                <a href="menus.html" class="hover:text-indigo-600 transition">Menus</a>
+                <a href="ordering.html" class="hover:text-indigo-600 transition">Ordering</a>
+                <a href="privacy.html" class="text-indigo-500 transition">Privacy</a>
+                <a href="legal.html" class="hover:text-indigo-600 transition">Legal</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="max-w-4xl mx-auto p-6 bg-white rounded-xl shadow-md border border-gray-200 my-10">
+
+        <h2 class="text-3xl font-extrabold text-gray-900 mb-6">Privacy</h2>
+
+        <div class="space-y-4 text-gray-700 leading-relaxed text-sm md:text-base">
+            <p>
+                You can visit this website anonymously. If we receive any personal data from you, we will not sell it to
+                third parties or make these data otherwise available, unless we are obliged to do so by the law.
+            </p>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-gray-200">
+            <p class="text-sm text-gray-600">
+                Contact us at: <a href="mailto:info@skillatspice.com"
+                    class="text-indigo-600 font-semibold hover:underline">info@skillatspice.com</a>
+            </p>
+        </div>
+
+    </main>
+
+    <!-- Footer Area -->
+    <footer class="bg-gray-100 text-center py-6 text-sm text-gray-600 mt-20 border-t border-gray-200">
+        <p>&copy; 2020 by SkillAtSpice LLC, a registered and licensed food business in the state of Washington.</p>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Orders | Skill At Spice</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation Area -->
+    <header class="bg-gray-100 text-indigo-800 shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+
+            <!-- Logo & Title Section -->
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                    <a href="index.html" class="inline-block focus:outline-none">
+                        <img src="images/Logo.png" alt="Skill At Spice Logo"
+                            class="w-16 h-16 transition duration-300 hover:scale-125 cursor-pointer">
+                    </a>
+                    <div>
+                        <h1 class="text-2xl md:text-3xl font-extrabold">
+                            Skill At Spice
+                        </h1>
+                        <p class="text-xs text-gray-600">14111 NE 24th St, Bellevue WA 98007</p>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="md:hidden text-indigo-800 focus:outline-none p-2 cursor-pointer">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Navigation Links (Collapsible on Mobile) -->
+            <nav id="menu"
+                class="hidden md:flex flex-col md:flex-row gap-3 md:gap-6 font-semibold text-sm pt-2 md:pt-0">
+                <a href="index.html" class="hover:text-indigo-600 transition">Home</a>
+                <a href="catering.html" class="hover:text-indigo-600 transition">Catering</a>
+                <a href="menus.html" class="hover:text-indigo-600 transition">Menus</a>
+                <a href="ordering.html" class="text-indigo-500 transition">Ordering</a>
+                <a href="privacy.html" class="hover:text-indigo-600 transition">Privacy</a>
+                <a href="legal.html" class="hover:text-indigo-600 transition">Legal</a>
+            </nav>
+
+
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="max-w-5xl mx-auto p-6 my-10">
+
+        <!-- Online Ordering Header & Status -->
+        <div class="bg-white rounded-xl shadow-md border border-gray-200 p-6 md:p-8 mb-10">
+            <h2 class="text-3xl font-extrabold text-gray-900 mb-3">Online Ordering</h2>
+            <p class="text-gray-600 mb-6">You can order online! Browse our menu items and choose what you’d like to
+                order from us.</p>
+
+            <!-- Badges & Fulfillment Options -->
+            <div class="flex flex-wrap items-center gap-4 mb-6">
+                <span
+                    class="inline-flex items-center gap-1.5 bg-green-100 text-green-800 text-sm font-semibold px-3 py-1 rounded-full">
+                    <span class="w-2 h-2 rounded-full bg-green-500"></span> Accepting Orders
+                </span>
+                <span
+                    class="bg-indigo-50 text-indigo-900 text-sm font-semibold px-3 py-1 rounded-full border border-indigo-200">
+                    Min. order - $29.98
+                </span>
+            </div>
+
+            <!-- Interactive Pickup / Delivery Selector Tabs -->
+            <div class="grid grid-cols-2 gap-4 max-w-md mb-6 border border-gray-200 rounded-lg p-1 bg-gray-50">
+                <button id="pickup-tab" onclick="switchTab('pickup')"
+                    class="bg-white text-indigo-800 font-bold py-2 rounded shadow-sm border border-gray-200 transition cursor-pointer">Pickup</button>
+                <button id="delivery-tab" onclick="switchTab('delivery')"
+                    class="text-gray-600 font-medium py-2 rounded hover:text-gray-900 transition cursor-pointer">Delivery</button>
+            </div>
+
+            <!-- Pickup Details Box (Default View) -->
+            <div id="pickup-content"
+                class="text-sm text-gray-600 space-y-1 bg-gray-50 p-4 rounded-lg border border-gray-200">
+                <p>🕒 <strong>Pickup time:</strong> Nov 12, 3:00 PM - 6:00 PM</p>
+                <p>📍 <strong>Pickup Address:</strong> 14111 Northeast 24th Street A, Bellevue, WA 98007</p>
+            </div>
+
+            <!-- Delivery Details Box (Hidden by Default) -->
+            <div id="delivery-content"
+                class="text-sm text-gray-600 space-y-1 bg-gray-50 p-4 rounded-lg border border-gray-200 hidden">
+                <p>🚗 <strong>Delivery Info:</strong> Limited deliveries only on Thursday for orders above $75.</p>
+                <p>📍 <strong>Service Area:</strong> Bellevue and surrounding areas. Enter your address at checkout.</p>
+            </div>
+        </div>
+
+        <!-- Menu for Monday and Thursday Section -->
+        <section class="bg-white rounded-xl shadow-md border border-gray-200 p-6 md:p-8 mb-12">
+            <h3 class="text-2xl font-bold text-indigo-800 mb-2">Menu for Monday and Thursday</h3>
+            <p id="menu-subtext" class="text-sm text-gray-600 mb-6">Thursday items (11/12/26) — Pickup on Thursday
+                between 3pm and 6pm.</p>
+
+            <!-- Menu Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- Item 1 -->
+                <div class="border border-gray-200 rounded-lg p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="font-bold text-base text-gray-900">Thursday-Black chickpeas masala</h4>
+                            <span
+                                class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-0.5 rounded">Vegan</span>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-4">Black chickpeas cooked in a mix of ginger, garlic, onions,
+                            tomatoes and whole spices.</p>
+                    </div>
+                    <div class="border-t border-gray-100 pt-3 flex items-center justify-between">
+                        <span class="font-bold text-indigo-700">$12.99</span>
+                        <button
+                            class="bg-indigo-600 text-white text-xs font-semibold px-3 py-1.5 rounded hover:bg-indigo-700 transition cursor-pointer">Add
+                            to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="border border-gray-200 rounded-lg p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="font-bold text-base text-gray-900">Thursday-Paneer green peas masala</h4>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-4">Paneer and peas cooked in a blend of carrots, tomatoes,
+                            onions, ginger, garlic, cashews and whole spices.</p>
+                    </div>
+                    <div class="border-t border-gray-100 pt-3 flex items-center justify-between">
+                        <span class="font-bold text-indigo-700">$14.99</span>
+                        <button
+                            class="bg-indigo-600 text-white text-xs font-semibold px-3 py-1.5 rounded hover:bg-indigo-700 transition cursor-pointer">Add
+                            to Cart</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Delivery Note -->
+            <div class="mt-8 bg-amber-50 border border-amber-200 p-4 rounded-lg text-center text-sm text-amber-900">
+                <p><strong>Limited deliveries only on Thursday above $75.</strong> Service fee is to help us offset the
+                    rising operational costs.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Area -->
+    <footer class="bg-gray-100 text-center py-6 text-sm text-gray-600 mt-20 border-t border-gray-200">
+        <p>&copy; 2020 by SkillAtSpice LLC, a registered and licensed food business in the state of Washington.</p>
+    </footer>
+
+    <!-- JavaScript for Interactive Tabs and Mobile Menu -->
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Interactive Tab Switcher Function
+        function switchTab(mode) {
+            const pickupTab = document.getElementById('pickup-tab');
+            const deliveryTab = document.getElementById('delivery-tab');
+            const pickupContent = document.getElementById('pickup-content');
+            const deliveryContent = document.getElementById('delivery-content');
+            const menuSubtext = document.getElementById('menu-subtext');
+
+            if (mode === 'pickup') {
+                pickupTab.className = "bg-white text-indigo-800 font-bold py-2 rounded shadow-sm border border-gray-200 transition cursor-pointer";
+                deliveryTab.className = "text-gray-600 font-medium py-2 rounded hover:text-gray-900 transition cursor-pointer";
+                pickupContent.classList.remove('hidden');
+                deliveryContent.classList.add('hidden');
+                menuSubtext.innerText = "Thursday items (11/12/26) — Pickup on Thursday between 3pm and 6pm.";
+            } else {
+                deliveryTab.className = "bg-white text-indigo-800 font-bold py-2 rounded shadow-sm border border-gray-200 transition cursor-pointer";
+                pickupTab.className = "text-gray-600 font-medium py-2 rounded hover:text-gray-900 transition cursor-pointer";
+                deliveryContent.classList.remove('hidden');
+                pickupContent.classList.add('hidden');
+                menuSubtext.innerText = "Thursday items (11/12/26) — Limited deliveries only on Thursday above $75.";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

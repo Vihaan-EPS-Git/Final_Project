@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu for Monday and Thursday | Skill At Spice</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation Area -->
+    <header class="bg-gray-100 text-indigo-800 shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+
+            <!-- Logo & Title Section -->
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                    <a href="index.html" class="inline-block focus:outline-none">
+                        <img src="images/Logo.png" alt="Skill At Spice Logo"
+                            class="w-16 h-16 transition duration-300 hover:scale-125 cursor-pointer">
+                    </a>
+                    <div>
+                        <h1 class="text-2xl md:text-3xl font-extrabold">
+                            Skill At Spice
+                        </h1>
+                        <p class="text-xs text-gray-600">14111 NE 24th St, Bellevue WA 98007</p>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="md:hidden text-indigo-800 focus:outline-none p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Navigation Links (Collapsible on Mobile) -->
+            <nav id="menu"
+                class="hidden md:flex flex-col md:flex-row gap-3 md:gap-6 font-semibold text-sm pt-2 md:pt-0">
+                <a href="index.html" class="hover:text-indigo-600 transition">Home</a>
+                <a href="catering.html" class="hover:text-indigo-600 transition">Catering</a>
+                <a href="menus.html" class="text-indigo-500 transition">Menus</a>
+                <a href="ordering.html" class="hover:text-indigo-600 transition">Ordering</a>
+                <a href="privacy.html" class="hover:text-indigo-600 transition">Privacy</a>
+                <a href="legal.html" class="hover:text-indigo-600 transition">Legal</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="max-w-5xl mx-auto p-6 my-10">
+
+        <!-- Page Title & Notice -->
+        <div class="mb-10 text-center">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-3">Menu for Monday and Thursday</h2>
+            <div
+                class="inline-block bg-amber-100 border border-amber-300 text-amber-900 px-4 py-2 rounded-lg text-sm font-medium">
+                Sorry, ordering is currently closed. New menu will be posted on Friday, 08/14/26. Thank you!
+            </div>
+        </div>
+
+        <!-- Thursday Menu Section -->
+        <section class="bg-white rounded-xl shadow-md border border-gray-200 p-6 md:p-8 mb-12">
+            <div class="border-b border-gray-200 pb-4 mb-6">
+                <h3 class="text-2xl font-bold text-indigo-800">Thursday items (11/12/26)</h3>
+                <p class="text-sm text-gray-600 mt-1">Pickup on Thursday between 3pm and 6pm.</p>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- Item 1 -->
+                <div class="border border-gray-200 rounded-lg p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="font-bold text-lg text-gray-900">Thursday-Black chickpeas masala</h4>
+                            <span
+                                class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">Vegan</span>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-4">Black chickpeas cooked in a mix of ginger, garlic, onions,
+                            tomatoes and whole spices.</p>
+                    </div>
+                    <div class="border-t border-gray-100 pt-3 flex justify-between text-sm">
+                        <span>16 oz: <strong class="text-indigo-700">$12.99</strong></span>
+                        <span>32 oz: <strong class="text-indigo-700">$24.99</strong></span>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="border border-gray-200 rounded-lg p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="font-bold text-lg text-gray-900">Thursday-Paneer green peas masala</h4>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-4">Paneer and peas cooked in a blend of carrots, tomatoes,
+                            onions, ginger, garlic, cashews and whole spices.</p>
+                    </div>
+                    <div class="border-t border-gray-100 pt-3 flex justify-between text-sm">
+                        <span>16 oz: <strong class="text-indigo-700">$14.99</strong></span>
+                        <span>32 oz: <strong class="text-indigo-700">$27.99</strong></span>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="border border-gray-200 rounded-lg p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="font-bold text-lg text-gray-900">Thursday-Grated carrots, edamame stir fry</h4>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-4">Grated carrots, edamame and coconut sautéed with onions,
+                            ground spices, garnished with curry leaves, cumin seeds and mustard seeds.</p>
+                    </div>
+                    <div class="border-t border-gray-100 pt-3 flex justify-between text-sm">
+                        <span>16 oz: <strong class="text-indigo-700">$12.99</strong></span>
+                        <span>32 oz: <strong class="text-indigo-700">$24.99</strong></span>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="border border-gray-200 rounded-lg p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="font-bold text-lg text-gray-900">Thursday-Soya chunks potato curry</h4>
+                            <span
+                                class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">Vegan</span>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-4">Soya chunks and potato chunks cooked in a mix of onions,
+                            ginger, garlic, tomatoes, coconut, nuts and spices (contains nuts).</p>
+                    </div>
+                    <div class="border-t border-gray-100 pt-3 flex justify-between text-sm">
+                        <span>16 oz: <strong class="text-indigo-700">$13.99</strong></span>
+                        <span>32 oz: <strong class="text-indigo-700">$26.99</strong></span>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="border border-gray-200 rounded-lg p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="font-bold text-lg text-gray-900">Thursday-Spinach dal</h4>
+                            <span
+                                class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">Vegan</span>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-4">Fresh spinach (palak) leaves cooked with organic split
+                            dal, seasoned with mustard seeds, cumin, and curry leaves.</p>
+                    </div>
+                    <div class="border-t border-gray-100 pt-3 flex justify-between text-sm">
+                        <span>16 oz: <strong class="text-indigo-700">$11.99</strong></span>
+                        <span>32 oz: <strong class="text-indigo-700">$22.99</strong></span>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="border border-gray-200 rounded-lg p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="font-bold text-lg text-gray-900">Thursday-Curried yogurt</h4>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-4">Yogurt mixed with sautéed onions, tomatoes and cilantro
+                            with a flavorful seasoning of mustard seeds, cumin, ginger and curry leaves.</p>
+                    </div>
+                    <div class="border-t border-gray-100 pt-3 flex justify-between text-sm">
+                        <span>16 oz: <strong class="text-indigo-700">$10.99</strong></span>
+                        <span>32 oz: <strong class="text-indigo-700">$19.99</strong></span>
+                    </div>
+                </div>
+
+                <!-- Item 7 -->
+                <div class="border border-gray-200 rounded-lg p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="font-bold text-lg text-gray-900">Thursday-Mixed veg sambar</h4>
+                            <span
+                                class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">Vegan</span>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-4">Lentil-based vegetable stew made with organic split
+                            lentils, drumsticks, fresh vegetables, tamarind
