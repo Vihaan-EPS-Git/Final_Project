@@ -49,108 +49,69 @@
                 <a href="legal.html" class="hover:text-indigo-600 transition">Legal</a>
             </nav>
 
-
         </div>
     </header>
 
     <!-- Main Content Area -->
-    <main class="max-w-5xl mx-auto p-6 my-10">
+    <main class="max-w-3xl mx-auto p-6 my-10">
+        <h2 class="text-3xl font-extrabold text-gray-900 mb-2">Online Ordering</h2>
+        <p class="text-gray-700 mb-2">You can order online! Browse our menu items and choose what you’d like to order
+            from us.</p>
+        <p class="font-semibold text-gray-800 mb-2">Accepting Orders</p>
+        <p class="text-gray-700 mb-6">🕒 <strong class="font-semibold">Pickup time:</strong> Nov 12, 3:00 PM - 6:00
+            PM<br>
+            📍 <strong class="font-semibold">Pickup Address:</strong> 14111 Northeast 24th Street A, Bellevue, WA 98007
+        </p>
 
-        <!-- Online Ordering Header & Status -->
-        <div class="bg-white rounded-xl shadow-md border border-gray-200 p-6 md:p-8 mb-10">
-            <h2 class="text-3xl font-extrabold text-gray-900 mb-3">Online Ordering</h2>
-            <p class="text-gray-600 mb-6">You can order online! Browse our menu items and choose what you’d like to
-                order from us.</p>
-
-            <!-- Badges & Fulfillment Options -->
-            <div class="flex flex-wrap items-center gap-4 mb-6">
-                <span
-                    class="inline-flex items-center gap-1.5 bg-green-100 text-green-800 text-sm font-semibold px-3 py-1 rounded-full">
-                    <span class="w-2 h-2 rounded-full bg-green-500"></span> Accepting Orders
-                </span>
-                <span
-                    class="bg-indigo-50 text-indigo-900 text-sm font-semibold px-3 py-1 rounded-full border border-indigo-200">
-                    Min. order - $29.98
-                </span>
+        <!-- Mock Cart Panel -->
+        <div class="bg-white border-2 border-indigo-600 rounded-xl p-6 mb-10 shadow-md">
+            <h3 class="text-lg font-extrabold text-indigo-600 mt-0 mb-3">🛒 Your Mock Cart (<span
+                    id="cart-count">0</span> items)</h3>
+            <ul id="cart-items" class="list-none p-0 m-0 mb-4">
+                <li class="text-gray-400 italic py-1.5">Cart is currently empty.</li>
+            </ul>
+            <div class="font-bold text-base flex justify-between border-t-2 border-gray-200 pt-3">
+                <span>Total:</span>
+                <span id="cart-total-price">$0.00</span>
             </div>
+            <button
+                class="bg-emerald-600 text-white font-bold py-2.5 px-4 w-full rounded-md mt-4 hover:bg-emerald-700 cursor-pointer transition-colors"
+                onclick="checkout()">Proceed to Checkout (Mock)</button>
+        </div>
 
-            <!-- Interactive Pickup / Delivery Selector Tabs -->
-            <div class="grid grid-cols-2 gap-4 max-w-md mb-6 border border-gray-200 rounded-lg p-1 bg-gray-50">
-                <button id="pickup-tab" onclick="switchTab('pickup')"
-                    class="bg-white text-indigo-800 font-bold py-2 rounded shadow-sm border border-gray-200 transition cursor-pointer">Pickup</button>
-                <button id="delivery-tab" onclick="switchTab('delivery')"
-                    class="text-gray-600 font-medium py-2 rounded hover:text-gray-900 transition cursor-pointer">Delivery</button>
-            </div>
+        <h2 class="text-2xl font-bold text-gray-900 mb-1">Menu for Monday and Thursday</h2>
+        <p class="text-gray-600 mb-6">Thursday items (11/12/26) — Pickup on Thursday between 3pm and 6pm.</p>
 
-            <!-- Pickup Details Box (Default View) -->
-            <div id="pickup-content"
-                class="text-sm text-gray-600 space-y-1 bg-gray-50 p-4 rounded-lg border border-gray-200">
-                <p>🕒 <strong>Pickup time:</strong> Nov 12, 3:00 PM - 6:00 PM</p>
-                <p>📍 <strong>Pickup Address:</strong> 14111 Northeast 24th Street A, Bellevue, WA 98007</p>
-            </div>
-
-            <!-- Delivery Details Box (Hidden by Default) -->
-            <div id="delivery-content"
-                class="text-sm text-gray-600 space-y-1 bg-gray-50 p-4 rounded-lg border border-gray-200 hidden">
-                <p>🚗 <strong>Delivery Info:</strong> Limited deliveries only on Thursday for orders above $75.</p>
-                <p>📍 <strong>Service Area:</strong> Bellevue and surrounding areas. Enter your address at checkout.</p>
+        <!-- Dish 1 -->
+        <div class="bg-white border border-gray-200 rounded-xl p-6 mb-5 shadow-sm">
+            <h3 class="text-lg font-bold text-gray-900 mt-0 mb-2 flex justify-between items-center">
+                Thursday-Black chickpeas masala
+                <span class="bg-emerald-100 text-emerald-800 text-xs py-0.5 px-2.5 rounded font-normal">Vegan</span>
+            </h3>
+            <p class="text-gray-600 mb-4">Black chickpeas cooked in a mix of ginger, garlic, onions, tomatoes and whole
+                spices.</p>
+            <div class="flex justify-between items-center mt-4">
+                <span class="text-lg font-extrabold text-gray-900">$12.99</span>
+                <button
+                    class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg transition cursor-pointer"
+                    onclick="addToCart('Thursday-Black chickpeas masala', 12.99)">Add to Cart</button>
             </div>
         </div>
 
-        <!-- Menu for Monday and Thursday Section -->
-        <section class="bg-white rounded-xl shadow-md border border-gray-200 p-6 md:p-8 mb-12">
-            <h3 class="text-2xl font-bold text-indigo-800 mb-2">Menu for Monday and Thursday</h3>
-            <p id="menu-subtext" class="text-sm text-gray-600 mb-6">Thursday items (11/12/26) — Pickup on Thursday
-                between 3pm and 6pm.</p>
-
-            <!-- Menu Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-                <!-- Item 1 -->
-                <div class="border border-gray-200 rounded-lg p-5 flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-2">
-                            <h4 class="font-bold text-base text-gray-900">Thursday-Black chickpeas masala</h4>
-                            <span
-                                class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-0.5 rounded">Vegan</span>
-                        </div>
-                        <p class="text-sm text-gray-600 mb-4">Black chickpeas cooked in a mix of ginger, garlic, onions,
-                            tomatoes and whole spices.</p>
-                    </div>
-                    <div class="border-t border-gray-100 pt-3 flex items-center justify-between">
-                        <span class="font-bold text-indigo-700">$12.99</span>
-                        <button
-                            class="bg-indigo-600 text-white text-xs font-semibold px-3 py-1.5 rounded hover:bg-indigo-700 transition cursor-pointer">Add
-                            to Cart</button>
-                    </div>
-                </div>
-
-                <!-- Item 2 -->
-                <div class="border border-gray-200 rounded-lg p-5 flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-2">
-                            <h4 class="font-bold text-base text-gray-900">Thursday-Paneer green peas masala</h4>
-                        </div>
-                        <p class="text-sm text-gray-600 mb-4">Paneer and peas cooked in a blend of carrots, tomatoes,
-                            onions, ginger, garlic, cashews and whole spices.</p>
-                    </div>
-                    <div class="border-t border-gray-100 pt-3 flex items-center justify-between">
-                        <span class="font-bold text-indigo-700">$14.99</span>
-                        <button
-                            class="bg-indigo-600 text-white text-xs font-semibold px-3 py-1.5 rounded hover:bg-indigo-700 transition cursor-pointer">Add
-                            to Cart</button>
-                    </div>
-                </div>
-
+        <!-- Dish 2 -->
+        <div class="bg-white border border-gray-200 rounded-xl p-6 mb-5 shadow-sm">
+            <h3 class="text-lg font-bold text-gray-900 mt-0 mb-2 flex justify-between items-center">
+                Thursday-Paneer green peas masala
+            </h3>
+            <p class="text-gray-600 mb-4">Paneer and peas cooked in a blend of carrots, tomatoes, onions, ginger,
+                garlic, cashews and whole spices.</p>
+            <div class="flex justify-between items-center mt-4">
+                <span class="text-lg font-extrabold text-gray-900">$14.99</span>
+                <button
+                    class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg transition cursor-pointer"
+                    onclick="addToCart('Thursday-Paneer green peas masala', 14.99)">Add to Cart</button>
             </div>
-
-            <!-- Delivery Note -->
-            <div class="mt-8 bg-amber-50 border border-amber-200 p-4 rounded-lg text-center text-sm text-amber-900">
-                <p><strong>Limited deliveries only on Thursday above $75.</strong> Service fee is to help us offset the
-                    rising operational costs.</p>
-            </div>
-        </section>
-
+        </div>
     </main>
 
     <!-- Footer Area -->
@@ -158,7 +119,7 @@
         <p>&copy; 2020 by SkillAtSpice LLC, a registered and licensed food business in the state of Washington.</p>
     </footer>
 
-    <!-- JavaScript for Interactive Tabs and Mobile Menu -->
+    <!-- JavaScript for Mobile Menu & Mock Cart -->
     <script>
         // Mobile Menu Toggle
         const btn = document.getElementById('menu-btn');
@@ -168,30 +129,52 @@
             menu.classList.toggle('hidden');
         });
 
-        // Interactive Tab Switcher Function
-        function switchTab(mode) {
-            const pickupTab = document.getElementById('pickup-tab');
-            const deliveryTab = document.getElementById('delivery-tab');
-            const pickupContent = document.getElementById('pickup-content');
-            const deliveryContent = document.getElementById('delivery-content');
-            const menuSubtext = document.getElementById('menu-subtext');
+        // Mock Cart Logic
+        let cart = [];
 
-            if (mode === 'pickup') {
-                pickupTab.className = "bg-white text-indigo-800 font-bold py-2 rounded shadow-sm border border-gray-200 transition cursor-pointer";
-                deliveryTab.className = "text-gray-600 font-medium py-2 rounded hover:text-gray-900 transition cursor-pointer";
-                pickupContent.classList.remove('hidden');
-                deliveryContent.classList.add('hidden');
-                menuSubtext.innerText = "Thursday items (11/12/26) — Pickup on Thursday between 3pm and 6pm.";
-            } else {
-                deliveryTab.className = "bg-white text-indigo-800 font-bold py-2 rounded shadow-sm border border-gray-200 transition cursor-pointer";
-                pickupTab.className = "text-gray-600 font-medium py-2 rounded hover:text-gray-900 transition cursor-pointer";
-                deliveryContent.classList.remove('hidden');
-                pickupContent.classList.add('hidden');
-                menuSubtext.innerText = "Thursday items (11/12/26) — Limited deliveries only on Thursday above $75.";
+        function addToCart(name, price) {
+            cart.push({ name, price });
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const cartItemsList = document.getElementById('cart-items');
+            const cartCount = document.getElementById('cart-count');
+            const cartTotalPrice = document.getElementById('cart-total-price');
+
+            cartCount.textContent = cart.length;
+
+            if (cart.length === 0) {
+                cartItemsList.innerHTML = '<li class="text-gray-400 italic py-1.5">Cart is currently empty.</li>';
+                cartTotalPrice.textContent = '$0.00';
+                return;
             }
+
+            cartItemsList.innerHTML = '';
+            let total = 0;
+
+            cart.forEach((item) => {
+                total += item.price;
+                const li = document.createElement('li');
+                li.className = "flex justify-between py-1.5 border-b border-gray-100 text-gray-700";
+                li.innerHTML = `<span>${item.name}</span> <span class="font-semibold">$${item.price.toFixed(2)}</span>`;
+                cartItemsList.appendChild(li);
+            });
+
+            cartTotalPrice.textContent = `$${total.toFixed(2)}`;
+        }
+
+        function checkout() {
+            if (cart.length === 0) {
+                alert('Your cart is empty! Add some dishes before checking out.');
+                return;
+            }
+
+            alert('Mock checkout successful! Thank you for ordering from Skill At Spice.');
+            cart = [];
+            updateCartUI();
         }
     </script>
-
 </body>
 
 </html>
